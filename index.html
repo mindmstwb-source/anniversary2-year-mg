@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Our Memory ❤️</title>
+    <style>
+        body { background: #fff5f7; font-family: sans-serif; text-align: center; color: #ff8fab; }
+        .box { background: white; padding: 30px; border-radius: 20px; margin: 50px auto; max-width: 400px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        input { padding: 10px; border-radius: 10px; border: 1px solid #ddd; width: 80%; }
+        button { background: #ff8fab; color: white; border: none; padding: 10px 20px; border-radius: 10px; margin-top: 10px; cursor: pointer; }
+        #content { display: none; }
+    </style>
+</head>
+<body>
+
+    <div id="login" class="box">
+        <h2>ใส่รหัสผ่านของเรา ❤️</h2>
+        <input type="password" id="pass" placeholder="000000">
+        <button onclick="check()">ตกลง</button>
+    </div>
+
+    <div id="content">
+        <h1>Happy 2nd Anniversary!</h1>
+        <p>ยินดีด้วยนะ เราคบกันมา 2 ปีแล้ว</p>
+        <img src="รูปของคุณ.jpg" style="width: 80%; border-radius: 15px;">
+        <br>
+        <audio controls autoplay>
+            <source src="เพลงของคุณ.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script>
+        function check() {
+            if(document.getElementById('pass').value === "010167") {
+                document.getElementById('login').style.display = 'none';
+                document.getElementById('content').style.display = 'block';
+            } else {
+                alert("รหัสผิดนะเจ้าตัวเล็ก!");
+            }
+        }
+    </script>
+</body>
+</html>
